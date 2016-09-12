@@ -10,7 +10,7 @@ makeCacheMatrix <- function(x = matrix()) {
   set <- function(y) {
     if ((nrow(y) == ncol(y)) && (det(y) != 0)) {   ##matrix must be square and determinant must be greater then 0
         +                x <<- y
-        +                inv <<- NULL        ##if matrix changes the cached inverse (if any) isn't correct anymore 
+        +                m <<- NULL        ##if matrix changes the cached inverse (if any) isn't correct anymore 
         +        }
     +        else {
       +            message("matrix must be square and its determinant != 0")
